@@ -14,9 +14,9 @@ Please use EFS for shared storage between the two nodes. Add at least a CloudWat
 
 The following is optional and will get you bonus points: 
 
-·       setup autoscaling 
+       setup autoscaling 
 
-·       do the above in ECS 
+       do the above in ECS 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 What I have done:
