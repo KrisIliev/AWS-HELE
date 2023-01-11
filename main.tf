@@ -45,13 +45,6 @@ resource "aws_security_group" "example" {
   description = "Example security group"
   vpc_id      = aws_vpc.example.id
 
-  # ingress {
-  #   from_port   = 80
-  #   to_port     = 80
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
-
   ingress {
     from_port        = 0
     to_port          = 0
@@ -95,15 +88,6 @@ resource "aws_launch_configuration" "example" {
   associate_public_ip_address = true
   key_name                    = aws_key_pair.example.id
   user_data                   = file("./user_data.sh")
-
-
-
-  #   user_data       = <<EOF
-  # #!/bin/bash
-  # yum install -y httpd
-  # echo "Hello, World!" > /var/www/html/index.html
-  # service httpd start
-  # EOF
 }
 
 resource "aws_autoscaling_group" "example" {
